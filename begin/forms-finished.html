@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<section>
+			<h1>Alien Abduction Order Form</h1>
+			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+		<form method="POST" action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" >
+		<!--ACTION and METHOD are two tags that help the devloper with submission to the server. the web developer will tell you what to put for each. -->
+			<input id="send_to" type="hidden" name="send_to"value="ayasho730@gmail.com">
+			<!--this is a HIDDEN input tag; these are not visible to users of the form so no label or ID needed. they help with the backend and processing of the form; the submissions will be sent through this usually-->
+			<fieldset>
+				<legend>Your contact information</legend>
+				<!--legend tag goes with/describes our fieldset tag this made the text be the header/title of the fieldset box -->
+				<label for="name">Your name</label>
+				<!--this is an accessibility tag, it is connected to the id tag below.-->
+				<input type="text" id="name" name="name">
+					<!-- type-lets you collect text into the form; id-you can name it anything, used specifically in this case its associated with label above; name- important for script that will process form (when we click submit button this is important)-->
+				<label for="phone">Phone number</label>
+				<input type="tel" id="phone" name="phone" placeholder="Don't forget the area code!">
+					<!--for phone tel type is good for mobile users-->
+
+				<label for="email">Email</label>
+				<input type="email" id="email"  name="email" placeholder="Don't forget the @">
+			</fieldset> <!--this creates section/fieldset to our form, in this case a box was made around the first three questions-->
+			<fieldset>
+				<legend>About your abduction</legend>
+				<label for="date">Requested date</label>
+				<input type="date" id="date" name="date">
+					<!--this input gives a date selection function-->
+				<label for="qty">How many people would you like abducted?</label>
+				<input type="number" id="qty" name="qty" min="1" max="10">
+					<!--allows min and max numbers in text box-->
+				<p>What type of UFO do you prefer?</p>
+				<label>
+					<input type="radio" name="ufotype" value="classic" checked> Classic oval UFO
+					<!--RADIO button gives multiple options where only one can be selected; the CHECKED tag allows a default button to be clicked already-->
+				</label>
+				<label>	
+					<input type="radio" name="ufotype" value="starwars"> Star Wars-style Imperial cruiser
+					<!--the name input is same as prior and the rest too, that catergorizes the radio buttons together. the value input has to be different-->
+				</label>	
+					<label> <input type="radio" name="ufotype" value="Galactica">
+					Galactica-style Viper
+				</label>
+				<!--the LABEL tag allows the text to be clickable too not just the button-->	
+				<label>
+				<input type="radio" name="ufotype" value="borg">Borg-style cube
+				</label>
+
+				<label for="abtype"> 
+				What type of abduction experience do you want?
+				</label>
+				<!--the LABEL tag here is setting up the SELECT tag, the FOR value and the ID value must be the same-->
+					<select id="abtype" name="abtype">
+						<option selected>Select one...</option>
+						<!--the SELECTED tag with option will make this option the first one by default, no matter where it is in option list-->
+						<option value="tour">Tour of the solar system</option>
+						<option value="dinner">Alien dinner and discussion</option>
+						<option value="dance">Alien dance lessons</option>
+						<option value="whale">Whale watching</option>
+					</select>
+					<!--the SELECT tag creates a drop down selection list with all our option. OPTION tags need a value; the VALUE tells us what was picked-->
+
+				<label for="comments">Special requests:</label>
+				<!--LABELLING the special requests FOR the textarea-->
+				<textarea id="comments" name="comments">		
+				</textarea>
+				<!--TEXTAREA tag just creates text box; for and id must be same!!!-->	
+				<label>
+					<input type="checkbox" name="subscribe" value="subscribe" checked> Add me to your email list
+				</label>
+				<!--CHECKBOX type creates a box that you can check. the text comes after everything so the check is before the text-->
+			</fieldset>
+			<button type="submit">Submit</button>
+			<!--creates a sumbit button on end of form-->
+			</form>			
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.3196148506277!2d-93.27301504910122!3d44.97781797899563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a733800b1%3A0x2e151ae0d4a5e091!2s60%20South%206th%20St%20%233625%2C%20Minneapolis%2C%20MN%2055402%2C%20USA!5e0!3m2!1sen!2sil!4v1672589736967!5m2!1sen!2sil" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+		</aside>
+	</div>
+	<script src="js/forms.js"></script>
+	<!--javasvript tag to help submission-->
+</body>
+</html>
+
+
+
+
+

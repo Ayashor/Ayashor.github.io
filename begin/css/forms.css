@@ -1,0 +1,98 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: 'Barlow', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/galaxy.jpg);
+	/*creates a background image on webpage- the url is the folder path to the image*/
+}
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: #efb106;
+	/*since this is is wrapper it only is in what wrapper class is defined*/
+}
+
+section {
+	flex-basis: 57%;
+	margin-right: 10%;
+}
+aside {
+	flex-basis: 33%;
+}
+p, [for="abtype"] /*changing the style of this selector using []; specifying*/ {
+	margin-bottom: 0;
+	margin-top: 2rem;
+	/* same as margin: 2rem 0 0 0 */
+}
+fieldset {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+legend{ 
+	/*legends are inline elements doesnt go all the way across*/
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 1.5rem;
+	margin-bottom: .5rem;
+}
+label{
+	/* labels are inline elements*/
+	display: block;
+	/*changes them to block elements*/
+	padding: 0.3rem;
+}
+textarea{
+	height: 10rem;
+	padding: 1rem;
+}
+select{
+	font-size: 1rem;
+}
+button{
+	font-size: 1rem;
+	margin: 1rem 1rem;
+	background-color: #db342f;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+}
+button:hover{
+	background-color: white;
+	color: #db342f;
+	/*this is code to make the button change colors when you hover*/
+}
+input:not([type="radio"]):not([type="checkbox"]), textarea, select /*basically you are selecting a bunch of selectors from the HTML doc and grouping them all together ny using commas so that they all have same attributes*/ {
+	display: block;
+	margin-bottom: 2rem;
+	width: 20rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	padding: 0 1rem;
+	border-radius: 10px;
+	border:none
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
